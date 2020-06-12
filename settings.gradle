@@ -1,0 +1,4 @@
+rootProject.name='TestModuleApp'
+include ':app'
+include ':data'
+include ':domain'
