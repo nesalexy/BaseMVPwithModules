@@ -2,6 +2,7 @@ package com.example.testmoduleapp
 
 import android.app.Application
 import com.example.testmoduleapp.di.AppComponent
+import com.example.testmoduleapp.di.AppModule
 import com.example.testmoduleapp.di.DaggerAppComponent
 
 class App : Application() {
@@ -17,6 +18,7 @@ class App : Application() {
 
     private fun initializeDagger() {
         appComponent = DaggerAppComponent.builder()
+            .appModule(AppModule(this))
             .build()
     }
 }

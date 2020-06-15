@@ -6,11 +6,11 @@ import android.net.ConnectivityManager
 import android.util.Log
 import com.example.utilities.resources.IResourceProvider
 
-class NetworkProvider: INetworkProvider {
-//class NetworkProvider(private val context: Context): INetworkProvider {
+//class NetworkProvider: INetworkProvider {
+class NetworkProvider(private val context: Context): INetworkProvider {
 
     override fun isNetwork(): Boolean {
-        Log.e("NetworkProvider", "isNetwork")
+        Log.e("NetworkProvider", "isNetwork and context")
         return true
     }
 

@@ -12,9 +12,10 @@ import dagger.*
 class UtilsModule {
 
     @Provides
-    fun getNetworkProvider(): NetworkProvider {
-        return NetworkProvider()
+    fun getNetworkProvider(context: Context): NetworkProvider {
+        return NetworkProvider(context)
     }
+
 
 }
 

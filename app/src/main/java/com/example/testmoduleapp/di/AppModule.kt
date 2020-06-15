@@ -1,16 +1,18 @@
 package com.example.testmoduleapp.di
 
+import android.app.Application
+import android.content.Context
 import com.example.testmoduleapp.ui.activities.main.MainPresenter
 import com.example.utilities.networks.NetworkProvider
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 
 @Module
-class MainModule {
+class AppModule(private val app:Application){
 
     @Provides
-    fun getMainPresenter(networkProvider: NetworkProvider): MainPresenter {
-        return MainPresenter(networkProvider)
-    }
+    @Singleton
+    fun provideContext(): Context = app
 
 }

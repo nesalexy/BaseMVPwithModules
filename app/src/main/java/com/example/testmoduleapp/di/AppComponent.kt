@@ -24,7 +24,7 @@ import javax.inject.Singleton
 //    fun inject(activity: MainActivity)
 //}
 
-@Component(modules = [UtilsModule::class, MainModule::class])
+@Component(modules = [AppModule::class, UtilsModule::class, MainModule::class])
 
 @Singleton
 interface AppComponent {
