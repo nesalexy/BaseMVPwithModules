@@ -60,7 +60,6 @@ dependencies {
     "io.reactivex.rxjava2:rxandroid:$rxAndroid"
 
     // Dagger
-    def daggerVersion = '2.27'
     api "com.google.dagger:dagger:$daggerVersion"
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
     api "com.google.dagger:dagger-android:$daggerVersion"
