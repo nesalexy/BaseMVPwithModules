@@ -5,6 +5,7 @@ import butterknife.ButterKnife
 import com.example.testmoduleapp.App
 import com.example.testmoduleapp.R
 import com.example.testmoduleapp.ui.base.BaseActivity
+import dagger.android.AndroidInjection
 import javax.inject.Inject
 
 class MainActivity : BaseActivity(),
@@ -15,6 +16,7 @@ class MainActivity : BaseActivity(),
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // dagger
+        //AndroidInjection.inject(this)
         App.appComponent.inject(activity = this@MainActivity)
 
         super.onCreate(savedInstanceState)

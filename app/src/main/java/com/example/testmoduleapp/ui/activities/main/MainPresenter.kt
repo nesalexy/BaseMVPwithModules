@@ -1,8 +1,10 @@
 package com.example.testmoduleapp.ui.activities.main
 
+import com.example.utilities.networks.INetworkProvider
 import com.example.utilities.networks.NetworkProvider
 
-class MainPresenter(val networkProvider: NetworkProvider) {
+
+class MainPresenter(val networkProvider: INetworkProvider) {
 
     lateinit var mainView: MainView
 
