@@ -12,8 +12,7 @@ import javax.inject.Inject
 
 class App : Application(), HasAndroidInjector {
 
-    @Inject
-    lateinit var androidInjector : DispatchingAndroidInjector<Any>
+    @Inject lateinit var androidInjector : DispatchingAndroidInjector<Any>
     override fun androidInjector(): AndroidInjector<Any> = androidInjector
 
     companion object{
@@ -31,6 +30,8 @@ class App : Application(), HasAndroidInjector {
             .application(this)
             .utilsComponent(provideUtilsComponent())
             .build()
+
+        appComponent.inject(this)
     }
 
     private fun provideUtilsComponent(): UtilsComponent {
@@ -39,4 +40,6 @@ class App : Application(), HasAndroidInjector {
             .application(this)
             .build()
     }
+
+
 }

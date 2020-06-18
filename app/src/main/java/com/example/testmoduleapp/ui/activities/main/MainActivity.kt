@@ -15,12 +15,11 @@ class MainActivity : BaseActivity(),
     lateinit var mainPresenter: MainPresenter;
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // dagger
-        //AndroidInjection.inject(this)
-        App.appComponent.inject(activity = this@MainActivity)
+        AndroidInjection.inject(this)
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         setUnBinder(ButterKnife.bind(this));
 
         // init view

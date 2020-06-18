@@ -13,13 +13,14 @@ import dagger.android.AndroidInjector
 import javax.inject.Singleton
 
 @Component(
-            dependencies = [UtilsComponent::class],
             modules = [
                     AndroidInjectionModule::class,
                     ActivityBindingModule::class,
                     MainModule::class // test module
-            ]
-)
+            ],
+            dependencies = [UtilsComponent::class]
+
+    )
 
 @AppScope
 interface AppComponent: AndroidInjector<App> {
@@ -33,15 +34,4 @@ interface AppComponent: AndroidInjector<App> {
 
         fun build(): AppComponent
     }
-
-    fun inject(activity: MainActivity)
 }
-
-//@Component(modules = [AppModule::class, UtilsModule::class, MainModule::class])
-//
-//@Singleton
-//interface AppComponent {
-//    // inject to ...
-//
-//    fun inject(activity: MainActivity)
-//}
