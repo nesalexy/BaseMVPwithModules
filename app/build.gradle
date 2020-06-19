@@ -52,6 +52,7 @@ dependencies {
 
     //butterknife
     implementation 'com.jakewharton:butterknife:10.2.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
     implementation 'com.google.android.material:material:1.1.0'
 
